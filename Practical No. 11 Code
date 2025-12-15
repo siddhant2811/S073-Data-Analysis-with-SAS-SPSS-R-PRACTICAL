@@ -1,0 +1,48 @@
+library(dplyr)
+library(tidyr)
+
+# 1. SETUP: Prepare Data
+df <- mtcars %>%
+  mutate(CarID = row_number(),
+         Car = rownames(mtcars)) %>%
+  select(CarID, Car, cyl, mpg, hp)
+
+print("1. Original Wide Data")
+print(head(df))
+
+# 2. PIVOT_LONGER (Wide to Long)
+# Combine mpg and hp into a single column for comparison
+long_df <- df %>%
+  pivot_longer(
+    cols = c(mpg, hp),
+    names_to = "Metric",
+    values_to = "Value"
+  )
+
+print("2. Long Format (pivot_longer)")
+print(head(long_df, 6))
+
+# 3. PIVOT_WIDER (Long to Wide)
+# Convert the long data back to wide format
+wide_df <- long_df %>%
+  pivot_wider(
+    names_from = Metric,
+    values_from = Value
+  )
+
+print("3. Wide Format (Back to Wide)")
+print(head(wide_df))
+
+# 4. ADVANCED EXAMPLE: Reshaping for Reporting
+# Create a table where each cylinder count becomes a column,
+# and values represent mpg
+cyl_pivot <- df %>%
+  select(CarID, cyl, mpg) %>%
+  pivot_wider(
+    names_from = cyl,
+    values_from = mpg,
+    names_prefix = "cyl_"
+  )
+
+print("4. Cylinder-wise MPG Table")
+print(head(cyl_pivot))
