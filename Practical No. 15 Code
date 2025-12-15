@@ -1,0 +1,60 @@
+tobacco_df <- read.csv("tobacco.csv", na.strings = c("", "NA"))
+
+print("--- Data Loaded ---")
+print(head(tobacco_df))
+
+
+
+print("--- OUTPUT OF str() ---")
+str(tobacco_df)
+
+print("--- OUTPUT OF summary() [Before Factor Conversion] ---")
+summary(tobacco_df)
+
+
+
+factor_cols <- c("nama_provinsi", "nama_kabupaten_kota", "satuan")
+
+for(col in factor_cols){
+  if(col %in% names(tobacco_df)){
+    tobacco_df[[col]] <- as.factor(tobacco_df[[col]])
+  }
+}
+
+print("--- OUTPUT OF summary() [After Factor Conversion] ---")
+summary(tobacco_df)
+
+
+
+
+avg_production <- mean(tobacco_df$jumlah_produksi, na.rm = TRUE)
+
+
+max_production <- max(tobacco_df$jumlah_produksi, na.rm = TRUE)
+
+
+total_production <- sum(tobacco_df$jumlah_produksi, na.rm = TRUE)
+
+
+min_year <- min(tobacco_df$tahun, na.rm = TRUE)
+max_year <- max(tobacco_df$tahun, na.rm = TRUE)
+
+
+most_common_province <- names(
+  sort(table(tobacco_df$nama_provinsi), decreasing = TRUE)
+)[1]
+
+
+most_common_kabupaten <- names(
+  sort(table(tobacco_df$nama_kabupaten_kota), decreasing = TRUE)
+)[1]
+
+
+
+print(paste("Average Tobacco Production:", avg_production))
+print(paste("Maximum Tobacco Production:", max_production))
+print(paste("Total Tobacco Production:", total_production))
+print(paste("Data Available From Year:", min_year, "to", max_year))
+print(paste("Most Frequent Province:", most_common_province))
+print(paste("Most Frequent Kabupaten/Kota:", most_common_kabupaten))
+
