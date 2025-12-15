@@ -1,0 +1,64 @@
+library(dplyr)
+
+print("STEP 1: Original ToothGrowth Dataset")
+print(paste("Total rows:", nrow(ToothGrowth)))
+print(paste("Total columns:", ncol(ToothGrowth)))
+print("Column names:")
+print(names(ToothGrowth))
+print("First 10 rows:")
+print(head(ToothGrowth, 10))
+
+
+tg_df_dup <- ToothGrowth %>%
+  bind_rows(ToothGrowth[1:10, ])
+
+print("STEP 2: Dataset After Adding Intentional Duplicates")
+print(paste("Rows after duplication:", nrow(tg_df_dup)))
+print("Last 10 rows (showing duplicates):")
+print(tail(tg_df_dup, 10))
+
+
+duplicates_report <- tg_df_dup %>%
+  group_by(len, supp, dose) %>%
+  summarise(Count = n(), .groups = "drop") %>%
+  filter(Count > 1)
+
+print("STEP 3: Duplicate Identification Report")
+print(paste("Number of duplicated combinations:", nrow(duplicates_report)))
+print(duplicates_report)
+
+
+clean_exact <- tg_df_dup %>%
+  distinct()
+
+print("STEP 4: After Removing Exact Duplicates")
+print(paste("Rows after distinct():", nrow(clean_exact)))
+print("Preview of cleaned data:")
+print(head(clean_exact, 10))
+
+
+unique_supp_dose <- tg_df_dup %>%
+  distinct(supp, dose, .keep_all = TRUE)
+
+print("STEP 5: Unique Supplement–Dose Records")
+print(paste("Rows after removing partial duplicates:", nrow(unique_supp_dose)))
+print(unique_supp_dose)
+
+
+comparison_summary <- data.frame(
+  Dataset = c(
+    "Original",
+    "With Duplicates",
+    "Exact Duplicates Removed",
+    "Unique supp-dose"
+  ),
+  Rows = c(
+    nrow(ToothGrowth),
+    nrow(tg_df_dup),
+    nrow(clean_exact),
+    nrow(unique_supp_dose)
+  )
+)
+
+print("STEP 6: Row Count Comparison Summary")
+print(comparison_summary)
