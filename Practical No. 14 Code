@@ -1,0 +1,41 @@
+library(lubridate)
+library(dplyr)
+library(readr)
+
+
+climate_df <- read_csv("Indian_Climate_Dataset_2024_2025.csv")
+
+
+str(climate_df)
+
+
+
+processed_data <- climate_df %>%
+  mutate(
+    
+    Actual_Date = ymd(Date),
+    
+    # B. Extract Date Components
+    Year_Num        = year(Actual_Date),
+    Month_Num       = month(Actual_Date),
+    Month_Name      = month(Actual_Date, label = TRUE, abbr = FALSE),
+    Day_Num         = day(Actual_Date),
+    Weekday_Num     = wday(Actual_Date),
+    Weekday_Name    = wday(Actual_Date, label = TRUE, abbr = FALSE),
+    Quarter         = quarter(Actual_Date),
+    Day_of_Year     = yday(Actual_Date)
+  )
+
+print("--- Data with Extracted Date Components ---")
+print(head(processed_data))
+
+
+
+current_time <- now()
+
+print("--- Current Time Extraction ---")
+print(paste("Current Year:", year(current_time)))
+print(paste("Current Month:", month(current_time)))
+print(paste("Current Day:", day(current_time)))
+print(paste("Current Hour:", hour(current_time)))
+
