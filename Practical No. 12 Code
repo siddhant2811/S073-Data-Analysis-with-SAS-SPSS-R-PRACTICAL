@@ -1,0 +1,32 @@
+print("Data Structure Before Combination")
+print(names(iris))
+
+# 1. SPLIT THE IRIS DATASET
+iris_setosa <- subset(iris, Species == "setosa")
+iris_versicolor <- subset(iris, Species == "versicolor")
+
+# 2. DATA PREPARATION (Aligning Columns)
+# Assume Sepal.Length represents "Height" for demonstration
+
+setosa_clean <- iris_setosa[, c("Species", "Sepal.Length")]
+names(setosa_clean) <- c("Species", "Height")
+
+versicolor_clean <- iris_versicolor[, c("Species", "Sepal.Length")]
+names(versicolor_clean) <- c("Species", "Height")
+
+# Ensure numeric consistency
+setosa_clean$Height <- as.numeric(setosa_clean$Height)
+versicolor_clean$Height <- as.numeric(versicolor_clean$Height)
+
+# 3. VERTICAL COMBINATION (rbind)
+combined_data <- rbind(setosa_clean, versicolor_clean)
+
+print("Combined Data Summary")
+print(paste("Setosa rows:", nrow(setosa_clean)))
+print(paste("Versicolor rows:", nrow(versicolor_clean)))
+print(paste("Total rows (Expected):", nrow(setosa_clean) + nrow(versicolor_clean)))
+print(paste("Total rows (Actual):", nrow(combined_data)))
+
+print("Preview of Combined Data")
+print(head(combined_data))
+print(tail(combined_data))
