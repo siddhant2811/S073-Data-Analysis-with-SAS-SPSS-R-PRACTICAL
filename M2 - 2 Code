@@ -1,0 +1,30 @@
+rm(list = ls())
+
+data <- read.csv("flipkard.csv")
+
+head(data)
+
+selected_data <- data[, c("seller", "price", "discount", "final_price")]
+
+str(selected_data)
+
+table(selected_data$seller)
+
+table(selected_data$price)
+
+table(selected_data$discount)
+
+table(selected_data$final_price)
+
+if (!require(dplyr)) {
+  install.packages("dplyr")
+  library(dplyr)
+} else {
+  library(dplyr)
+}
+
+count(selected_data, seller)
+count(selected_data, price)
+count(selected_data, discount)
+count(selected_data, final_price)
+
