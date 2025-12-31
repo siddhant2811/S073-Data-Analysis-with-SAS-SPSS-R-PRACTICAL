@@ -1,0 +1,21 @@
+rm(list = ls())
+
+data <- read.csv("Data.csv")
+
+head(data)
+
+selected_data <- data[, c("AT", "V", "AP", "RH", "PE")]
+
+str(selected_data)
+
+summary(selected_data)
+
+if (!require(psych)) {
+  install.packages("psych")
+  library(psych)
+} else {
+  library(psych)
+}
+
+describe(selected_data)
+
