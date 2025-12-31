@@ -1,0 +1,28 @@
+rm(list = ls())
+
+setwd("C:/Your/Folder/Path")
+
+data <- read.csv("original_dataset.csv")
+
+head(data)
+
+str(data)
+
+summary(data$annual_income)
+summary(data$monthly_income)
+summary(data$loan_amount)
+summary(data$installment)
+
+t.test(data$annual_income, data$monthly_income, paired = TRUE)
+t.test(data$annual_income, data$monthly_income, paired = TRUE, alternative = "greater")
+t.test(data$annual_income, data$monthly_income, paired = TRUE, alternative = "less")
+t.test(data$annual_income, data$monthly_income, paired = TRUE, conf.level = 0.95)
+
+t.test(data$loan_amount, data$installment, paired = TRUE)
+t.test(data$loan_amount, data$installment, paired = TRUE, alternative = "greater")
+t.test(data$loan_amount, data$installment, paired = TRUE, alternative = "less")
+t.test(data$loan_amount, data$installment, paired = TRUE, conf.level = 0.95)
+
+t.test(data$annual_income, data$loan_amount, paired = TRUE)
+t.test(data$monthly_income, data$installment, paired = TRUE)
+
