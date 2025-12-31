@@ -1,0 +1,39 @@
+rm(list = ls())
+
+setwd("C:/Your/Folder/Path")
+
+data <- read.csv("data.csv")
+
+head(data)
+
+str(data)
+
+data$group_culmen_length <- ifelse(data$culmen_length >= median(data$culmen_length, na.rm = TRUE), "High", "Low")
+data$group_culmen_depth <- ifelse(data$culmen_depth >= median(data$culmen_depth, na.rm = TRUE), "High", "Low")
+data$group_flipper_length <- ifelse(data$flipper_length >= median(data$flipper_length, na.rm = TRUE), "High", "Low")
+data$group_body_mass <- ifelse(data$body_mass >= median(data$body_mass, na.rm = TRUE), "High", "Low")
+
+table(data$group_culmen_length)
+table(data$group_culmen_depth)
+table(data$group_flipper_length)
+table(data$group_body_mass)
+
+t.test(culmen_length ~ group_culmen_length, data = data)
+t.test(culmen_length ~ group_culmen_length, data = data, var.equal = TRUE)
+t.test(culmen_length ~ group_culmen_length, data = data, alternative = "greater")
+t.test(culmen_length ~ group_culmen_length, data = data, alternative = "less")
+
+t.test(culmen_depth ~ group_culmen_depth, data = data)
+t.test(culmen_depth ~ group_culmen_depth, data = data, var.equal = TRUE)
+t.test(culmen_depth ~ group_culmen_depth, data = data, alternative = "greater")
+t.test(culmen_depth ~ group_culmen_depth, data = data, alternative = "less")
+
+t.test(flipper_length ~ group_flipper_length, data = data)
+t.test(flipper_length ~ group_flipper_length, data = data, var.equal = TRUE)
+t.test(flipper_length ~ group_flipper_length, data = data, alternative = "greater")
+t.test(flipper_length ~ group_flipper_length, data = data, alternative = "less")
+
+t.test(body_mass ~ group_body_mass, data = data)
+t.test(body_mass ~ group_body_mass, data = data, var.equal = TRUE)
+t.test(body_mass ~ group_body_mass, data = data, alternative = "greater")
+t.test(body_mass ~ group_body_mass, data = data, alternative = "less")
