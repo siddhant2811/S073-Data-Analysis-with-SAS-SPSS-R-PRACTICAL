@@ -1,0 +1,38 @@
+rm(list = ls())
+
+
+data <- read.csv("penguins.csv")
+
+head(data)
+
+str(data)
+
+summary(data$culmen_length)
+summary(data$culmen_depth)
+summary(data$flipper_length)
+summary(data$body_mass)
+
+t.test(data$culmen_length, mu = 0)
+t.test(data$culmen_length, mu = mean(data$culmen_length))
+t.test(data$culmen_length, mu = 50, conf.level = 0.95)
+t.test(data$culmen_length, mu = 50, alternative = "greater")
+t.test(data$culmen_length, mu = 50, alternative = "less")
+
+t.test(data$culmen_depth, mu = 0)
+t.test(data$culmen_depth, mu = mean(data$culmen_depth))
+t.test(data$culmen_depth, mu = 15, conf.level = 0.95)
+t.test(data$culmen_depth, mu = 15, alternative = "greater")
+t.test(data$culmen_depth, mu = 15, alternative = "less")
+
+t.test(data$flipper_length, mu = 0)
+t.test(data$flipper_length, mu = mean(data$flipper_length))
+t.test(data$flipper_length, mu = 200, conf.level = 0.95)
+t.test(data$flipper_length, mu = 200, alternative = "greater")
+t.test(data$flipper_length, mu = 200, alternative = "less")
+
+t.test(data$body_mass, mu = 0)
+t.test(data$body_mass, mu = mean(data$body_mass))
+t.test(data$body_mass, mu = 4000, conf.level = 0.95)
+t.test(data$body_mass, mu = 4000, alternative = "greater")
+t.test(data$body_mass, mu = 4000, alternative = "less")
+
