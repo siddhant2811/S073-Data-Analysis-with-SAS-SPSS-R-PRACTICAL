@@ -1,0 +1,139 @@
+id,team_id,name,roll_number,department,year,gender
+1,1,Shiva Swami ,T120,CS,TY,Male
+2,1,Gaurav Gupta ,T079,CS,TY,Male
+3,1,Harsh Sharma ,T111,CS,TY,Male
+4,1,Abin Pillai ,T104,CS,TY,Male
+5,1,Sachin Sharma ,T112,CS,TY,Male
+6,1,Muskan Pandey ,T099,CS,TY,Female
+7,2,Ghanshyam Kanojiya,T087,CS,TY,Male
+8,2,Shreeraj Desai,T075,CS,TY,Male
+9,2,Shobit Halse,T083,CS,TY,Male
+10,2,Kunal Joshi,T086,CS,TY,Male
+11,2,Yeshwant Naik,T097,CS,TY,Male
+12,2,Swati Mahajan,T093,CS,TY,Female
+13,3,Vedant Patil,T101,CS,TY,Male
+14,3,Atharva Jadhav,T084,CS,TY,Male
+15,3,Shweta Todgire,T122,CS,TY,Female
+16,3,Mihir Salvi ,T107,CS,TY,Male
+17,3,Naval Mohanraj,T098,CS,TY,Male
+18,3,Clive Lewis,T092,CS,TY,Male
+25,5,Bhumika Dube,T014,IT,TY,Female
+26,5,Harshit Jaiswal ,T021,IT,TY,Male
+27,5,Raj halwai,T019,IT,TY,Male
+28,5,Manan Jain,T020,IT,TY,Male
+29,5,Saksham Sharma ,T044,IT,TY,Male
+30,5,Ankit Bind,T006,IT,TY,Male
+31,6,Rajdeepp Parab,S101,CS,SY,Male
+32,6,Vinod Mali,S092,CS,SY,Male
+33,6,Jeetesh Shirangoor,S125,CS,SY,Male
+34,6,Mithil Kadam,S083,CS,SY,Male
+35,6,Chetan Mandavkar,S093,CS,SY,Male
+36,6,Ankita Tiwari,S122,CS,SY,Female
+37,7,Kermeen Deboo ,T074,CS,TY,Female
+38,7,Jyoti Kumbhar,T091,CS,TY,Female
+39,7,Bhumika Shelar,T114,CS,TY,Female
+40,7,Nandini Kharat ,T027,IT,TY,Female
+41,7,Saurabh Chauhan,T008,IT,TY,Male
+42,7,Rangeet Charoliya,T007,IT,TY,Male
+43,8,Gautam Shah,T109,CS,TY,Male
+44,8,Priyanka Pawar,T102,CS,TY,Female
+45,8,Manisha Gupta,T080,CS,TY,Female
+46,8,Rajanish Bhardwaj,T073,CS,TY,Male
+47,8,Ram Kumar Singh,T118,CS,TY,Male
+48,8,Nitin Kumar Bera,T072,CS,TY,Male
+49,9,Harshita Kanojia ,S011,IT,SY,Female
+50,9,Himani Malankar ,S107,IT,SY,Female
+51,9,Omkar Prakash Sawant ,S039,IT,SY,Male
+52,9,SACHIN SINGH,S043,IT,SY,Male
+53,9,Ritesh Chaubey,S005,IT,SY,Male
+54,9,Saqlain Khan,S014,IT,SY,Male
+55,10,Selvesh Sathiyaseelan Nadar,S096,CS,SY,Male
+56,10,Aashka Ajay Mishra,S095,CS,SY,Female
+57,10,Deesha Nilesh Chavan,S076,CS,SY,Female
+58,10,Omith Thilakan ,S097,CS,SY,Male
+59,10,Riya Hemant Rane,S107,CS,SY,Female
+60,10,Alam Gazala Parveen,S071,CS,SY,Female
+61,11,Ziven Pereira ,T103,CS,TY,Male
+62,11,Carol Pillai ,S104,CS,SY,Female
+63,11,Sahil Dave ,S077,CS,SY,Male
+64,11,Manjit Singh ,T117,CS,TY,Male
+65,11,Omkar kubal ,T090,CS,TY,Male
+66,11,Aayush Yadav,T123,CS,TY,Male
+67,12,Daniyal,S088,CS,SY,Male
+68,12,Vikas Pal ,S098,CS,SY,Male
+69,12,Abhishek ,S116,CS,SY,Male
+70,12,Shubham,S085,CS,SY,Male
+71,12,Purvi ,S086,CS,SY,Female
+72,12,Pushpal,S102,CS,SY,Female
+73,13,Simran shaikh,S113,CS,SY,Female
+74,13,Nishita Giri,S080,CS,SY,Female
+75,13,Nandini Pandit,S100,CS,SY,Female
+76,13,Siya Poipkar,S105,CS,SY,Female
+77,13,Yukta Sonawane,S120,CS,SY,Female
+78,13,Srushti Vedak,F119,CS,FY,Female
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+85,15,DHEERAJ SINGH ,S118,CS,SY,Male
+86,15,HARIPRASAD VISHWAKARMA ,S126,CS,SY,Male
+87,15,MADESH SIVAKUMAR ,S090,CS,SY,Male
+88,15,Dhairya singh,S117,CS,SY,Male
+89,15,Anshrah Shaikh,S111,CS,SY,Female
+90,15,MOHAMMED AQUIB HAFIZ SHAIKH ,S112,CS,SY,Male
+91,16,Lavkush Virendranath Vishwakarma,47,IT,SY,Male
+92,16,Bhavesh Ramakant Salaskar,38,IT,SY,Male
+93,16,Akansha Pritam Ranade,37,IT,SY,Female
+94,16,Parth Ramesh Kunkunkar,15,IT,SY,Male
+95,16,Divyanjali Baliram Yadav,51,IT,SY,Female
+96,16,Kushhboo Mohd Naeem Shaikh,41,IT,SY,Female
+97,17,Soham.V.Patil,S103,CS,SY,Male
+98,17,Shubham.A.Raorane,S108,CS,SY,Male
+99,17,Mihir.R.Kadam,S082,CS,SY,Male
+100,17,Pranav.P.Chaugule,S075,CS,SY,Male
+101,17,Hetal Shewale,F112,CS,FY,Female
+102,17,Vaishnavi.Kadam,F152,BT,FY,Female
+103,18,Jency Nadar,T095,CS,TY,Female
+104,18,Sidhhi Naik,T096,CS,TY,Female
+105,18,Shubhangi Mane,T094,CS,TY,Female
+106,18,Palak ,F088,CS,FY,Female
+107,18,Aditya Rana,F105,CS,FY,Male
+108,18,Anand Gupta,T078,CS,TY,Male
+109,19,Riddhi Singh,T119,CS,TY,Female
+110,19,Gungun Jain,T085,CS,TY,Female
+111,19,Shruti Suryakant Shelar,T115,CS,TY,Female
+112,19,Anushka Sadashiv Shelar,T113,CS,TY,Female
+113,19,Dhriti Kaur Saggu,F107,CS,FY,Female
+114,19,Dhruv Choubey,F080,CS,FY,Male
+115,20,Prajapati raj,33,IT,SY,Male
+116,20,Som mishra,24,IT,SY,Male
+117,20,Sachin Maheta,19,IT,SY,Male
+118,20,Suyash Karnnale,12,IT,SY,Male
+119,20,Navin Mishra,21,IT,SY,Male
+120,20,Shahu Roshani,40,IT,SY,Female
+121,21,Shivam mane ,S094,CS,SY,Male
+122,21,Tanvi khair ,S807,CS,SY,Female
+123,21,Akash pramanick,S106,CS,SY,Male
+124,21,Siddhant chalke,S073,CS,SY,Male
+125,21,Shreyas kadam,F090,CS,FY,Male
+126,21,Om wala,F122,CS,FY,Male
+127,22,Prajwal Bhosale,5,IT,TY,Male
+128,22,Dhruv Bendre,4,IT,TY,Male
+129,22,Satyam Dubey,15,IT,TY,Male
+130,22,Leena Mondal,30,IT,TY,Female
+131,22,Sandhya Tiwari,48,IT,TY,Female
+132,22,Dakshata Kamble,23,IT,TY,Female
+133,23,Abhay rai,T106,CS,TY,Male
+134,23,Aditya Gupta ,T077,CS,TY,Male
+135,23,Suraj gupta,T081,CS,TY,Male
+136,23,Amruta Lotale,F096,CS,FY,Male
+137,23,Prince yadav,T125,CS,TY,Male
+138,23,Sania qureshi,T105,CS,TY,Female
+139,24,Aman Rajesh Dubal ,T076,CS,TY,Male
+140,24,Sumit Anantha Shinde ,T115,CS,TY,Male
+141,24,Rani Ramesh Chavre,S128,CS,SY,Female
+142,24,Priya Rakesh Gupta ,S081,CS,SY,Female
+143,24,Kavyanjali Ranjana Thangaraj ,S121,CS,SY,Female
+144,24,Suraj Jaiswal ,F089,CS,FY,Male
